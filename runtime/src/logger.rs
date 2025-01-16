@@ -81,10 +81,11 @@ impl Logger {
         }
     }
 
+    // xfuzz modify.
     fn fini(&self) {
         if let Some(fd) = &self.fd {
-            let mut writer = io::BufWriter::new(fd);
-            serialize_into(&mut writer, &self.data).expect("Could not serialize data.");
+            let writer = io::BufWriter::new(fd);
+            self.data.serialize_to_fd(writer).expect("Could not serialize data.");
         }
     }
 }
