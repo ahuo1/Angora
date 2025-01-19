@@ -17,9 +17,9 @@ pub const BRANCHES_SIZE: usize = 1 << MAP_SIZE_POW2;
 
 // executor.rs:
 pub const TMOUT_SKIP: usize = 3;
-pub const TIME_LIMIT: u64 = 1000;
+pub const TIME_LIMIT: u64 = 1;
 pub const MEM_LIMIT: u64 = 200; // MB
-pub const TIME_LIMIT_TRACK: u64 = 1200;
+pub const TIME_LIMIT_TRACK: u64 = 12;
 pub const MEM_LIMIT_TRACK: u64 = 0;
 pub const LONG_FUZZ_TIME: usize = 8;
 pub const MAX_INVARIABLE_NUM: usize = 16;
